@@ -435,9 +435,25 @@
             </div>
 
           </div>
-
+          <form
+          action="https://formspree.io/f/xqknagkz"
+          method="POST"
+        >
+          <label>
+            Your email:
+            <input type="email" name="_replyto">
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+          <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+        </form>
+          <!-- your other form fields go here -->
+        </form>
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="#" method="post" role="form" class="php-email-form">
+            <form action="https://formspree.io/f/xqknagkz" method="POST" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -445,7 +461,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <input type="email" class="form-control" name="_replyto" id="email" required>
                 </div>
               </div>
               <div class="form-group">
@@ -461,7 +477,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" value="Send">Send Message</button></div>
             </form>
           </div>
 
