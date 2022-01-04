@@ -805,11 +805,11 @@ section {
   display: none;
   color: #fff;
   text-align: left;
-  padding: 15px;
+  padding: 1px;
   font-weight: 100;
 }
 .contact .php-email-form .error-message br + br {
-  margin-top: 25px;
+  margin-top: 1px;
 }
 .contact .php-email-form .sent-message {
   display: none;
