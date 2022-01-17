@@ -501,7 +501,7 @@ section {
   bottom: 0;
   transition: all ease-in-out 0.3s;
   z-index: 2;
-  opacity: 0;
+  opacity: 0.3;
 }
 .portfolio .portfolio-wrap .portfolio-links {
   opacity: 1;
@@ -520,7 +520,7 @@ section {
   text-align: center;
   background: rgba(20, 157, 221, 0.75);
   transition: 0.3s;
-  width: 100%;
+  width: 150%;
 }
 .portfolio .portfolio-wrap .portfolio-links a:hover {
   background: rgba(20, 157, 221, 0.95);
@@ -533,7 +533,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 1;
+  opacity: 0;
 }
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
