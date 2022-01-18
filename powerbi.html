@@ -268,16 +268,24 @@
           <div class="col-lg-12">
             <div class="portfolio-info">
               <h3>PART 3: Adding DAX Measures</h3>
-              <strong><h5>Using the report I created in Part 2, now I'm adding all calculated column with the help of DAX :</h5></strong>
+              <strong><h5 class="mb-4">Using the report I created in Part 2, now I'm adding all calculated column with the help of DAX :</h5></strong>
               <ul style="list-style-type:disc" >
                 <li class="my-2">In the Calendar table, add a column named "Weekend" - Equals "Y" for Saturdays or Sundays (otherwise "N")</li>
                 <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Weekend = IF(OR('Calendar'[Day Name]=="Saturday",'Calendar'[Day Name]=="Sunday"),"Y","N")</mark></h5>
                 <li class="my-2">In the Calendar table, add a column named "End of Month" - Returns the last date of the current month for each row</li>
+                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">End of Month = ENDOFMONTH('Calendar'[date].[Date])</mark></h5>
+                <li class="my-2">In the Customers table, add a column named "Current Age" - Calculates current customer ages using the "birthdate" column and the TODAY() function</li>
+                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Current Age = DATEDIFF(Customers[birthdate],TODAY(),YEAR)</mark></h5>
+                <li class="my-2">In the Customers table, add a column named "Priority" - Equals "High" for customers who own homes and have Golden membership cards (otherwise "Standard")</li>
+                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Priority = IF(AND(Customers[homeowner]=="Y",Customers[member_card]=="Golden"),"High","Standard")</mark></h5>
+                <li class="my-2">In the Customers table, add a column named "Short_Country" - Returns the first three characters of the customer country, and converts to all uppercase </li>
                 <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Weekend = IF(OR('Calendar'[Day Name]=="Saturday",'Calendar'[Day Name]=="Sunday"),"Y","N")</mark></h5>
-                  <li class="my-2">In the Customers table, add a column named "Current Age" - Calculates current customer ages using the "birthdate" column and the TODAY() function</li>
-                  <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Weekend = IF(OR('Calendar'[Day Name]=="Saturday",'Calendar'[Day Name]=="Sunday"),"Y","N")</mark></h5>
-                  <li class="my-2">In the Customers table, add a column named "Priority" - Equals "High" for customers who own homes and have Golden membership cards (otherwise "Standard")</li>
-                  <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Weekend = IF(OR('Calendar'[Day Name]=="Saturday",'Calendar'[Day Name]=="Sunday"),"Y","N")</mark></h5>
+                <li class="my-2">In the Customers table, add a column named "House Number" - Extracts all characters/numbers before the first space in the "customer_address" column (hint: use SEARCH)</li>
+                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">End of Month = ENDOFMONTH('Calendar'[date].[Date])</mark></h5>
+                <li class="my-2">In the Products table, add a column named "Price_Tier" - Equals "High" if the retail price is >$3, "Mid" if the retail price is >$1, and "Low" otherwise</li>
+                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Current Age = DATEDIFF(Customers[birthdate],TODAY(),YEAR)</mark></h5>
+                <li class="my-2">In the Stores table, add a column named "Years_Since_Remodel" - Calculates the number of years between the current date (TODAY()) and the last remodel date</li>
+                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Priority = IF(AND(Customers[homeowner]=="Y",Customers[member_card]=="Golden"),"High","Standard")</mark></h5>
                 </ul>
             </div>
           </div>
