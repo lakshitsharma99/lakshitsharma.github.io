@@ -252,21 +252,15 @@
             <div class="portfolio-info">
               <h3>PART 2: Creating the Data Model</h3>
               <p>
-                <h5>Using the report I created in Part 1, I will complete the following steps:</h5>
+                <strong><h5>Using the report I created in Part 1, I will complete the following steps:</h5></strong>
                 <ul style="list-style-type:disc">
                   <li>Connect Transaction_Data to Customers, Products, and Stores using valid primary/foreign keys </li>
                   <li>Connect Transaction_Data to Calendar using both date fields, with an inactive "stock_date" relationship</li>
                   <li>Connect Return_Data to Products, Calendar, and Stores using valid primary/foreign keys</li>
                   <li>Connect Stores to Regions as a "snowflake" schema</li>
                 </ul>
-                <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-2" src="assets/img/portfolio/7.png" alt="">
-                <h5>All tables are now connected with each other, now I'm tranforming some data and getting it ready for Data Analysis.</h5>
-                <ul style="list-style-type:disc">
-                  <li>Update all date fields (across all tables) to the "M/d/yyyy" format using the formatting tools in the Modeling tab</li>
-                  <li>Update "product_retail_price", "product_cost", and "discount_price" to Currency ($ English) format</li>
-                  <li>In the Customers table, categorize "customer_city" as City, "customer_postal_code" as Postal Code, and "customer_country" as Country/Region</li>
-                  <li>In the Stores table, categorize "store_city" as City, "store_state" as State or Province, "store_country" as Country/Region, and "full_address" as Address </li>
-                </ul>
+                <img class="col-12 col-md-12 col-sm-12 col-lg-8 mt-2 mb-4" src="assets/img/portfolio/7.png" alt="">
+                <h5>All tables are now connected with each other, now I'm transforming some data and getting it ready for Data Analysis.</h5>
               </p>
             </div>
           </div>
@@ -274,16 +268,14 @@
           <div class="col-lg-12">
             <div class="portfolio-info">
               <h3>PART 3: Adding DAX Measures</h3>
-              <p>
-                I am working for my client Maven Market, a multi-national grocery chain with locations in Canada, Mexico
-                and
-                the United States.
-
-                I will be working through the entire business intelligence workflow: connecting and shaping the source
-                data,
-                building a relational model, adding calculated columns and measures, and designing an interactive
-                report.
-              </p>
+              <strong><h5>Using the report I created in Part 2, now I'm adding all calculated column with the help of DAX :</h5></strong>
+              <ul style="list-style-type:disc">
+                <li>In the Calendar table, add a column named "Weekend"
+                  Equals "Y" for Saturdays or Sundays (otherwise "N")                   </li>
+                <li>Connect , with an inactive "stock_date" relationship</li>
+                <li>Connect Return_Data tovalid primary/foreign keys</li>
+                <li>Connect Stores to Regions as a "snowflake" schema</li>
+              </ul>
             </div>
           </div>
 
