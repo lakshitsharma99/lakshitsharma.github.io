@@ -125,7 +125,7 @@
               I will be working through the entire business intelligence workflow: <strong>Connecting & Shaping the
                 source data,
                 building a relational model, adding calculated columns & measures, and designing an interactive
-                report.</strong>
+                report. </strong>
             </div>
           </div>
           <div class="col-lg-6">
@@ -145,22 +145,46 @@
               <h3>PART 1: Connecting & Shaping the Data
               </h3>
               <p>
-                1) Connect to the MavenMarket_Customers csv file
-              <ul>
-                <li><strong>Name the table "Customers", and make sure that headers have been promoted</strong></li>
-                <li><strong>Confirm that data types are accurate (Note: "customer_id" should be whole numbers, and both
-                    "customer_acct_num" and "customer_postal_code" should be text)</strong></li>
-                <li><strong>Add a new column named "full_name" to merge the the "first_name" and "last_name" columns,
-                    separated by a space</strong></li>
-                <li><strong>Create a new column named "birth_year" to extract the year from the "birthdate" column, and
-                    format as text</strong></li>
-                <li><strong>Create a conditional column named "has_children" which equals "N" if "total_children" = 0,
-                    otherwise "Y"</strong></li>
+                <strong> 1) I am connecting MavenMarket_Customers.csv file in Power BI through Get Data button option.
+                  There are several problems which I will solve with the help of Power Query and then save the file with
+                  name <em>Customers.</em></strong>
+              <ul style="list-style-type:disc">
+                <li>Name the table "Customers", and make sure that headers have been promoted</strong></li>
+                <li>Confirm that data types are accurate (Note: "customer_id" should be whole numbers, and both
+                  "customer_acct_num" and "customer_postal_code" should be text)</strong></li>
+                <li>Add a new column named "full_name" to merge the the "first_name" and "last_name" columns,
+                  separated by a space</strong></li>
+                <li>Create a new column named "birth_year" to extract the year from the "birthdate" column, and
+                  format as text</strong></li>
+                <li>Create a conditional column named "has_children" which equals "N" if "total_children" = 0,
+                  otherwise "Y"</strong></li>
               </ul>
-                <img class="col-12 col-md-12  col-sm-12 col-lg-6" src="assets/img/portfolio/1.png" alt="">
-              
+              <strong> I have successfully solved the above problems & all appllied steps is showing right hand-side pane in Power
+                Query window. Check Below 👇 </strong>
+              <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-3" src="assets/img/portfolio/1.png" alt="">
+              </p>
 
-
+              <p>
+                <strong> 2) In this step I am connecting MavenMarket_Products.csv file in Power BI.
+                  There are several problems which I will solve with the help of Power Query and then save the file with
+                  name <em>Products.</em></strong>
+              <ul style="list-style-type:disc">
+                <li>Name the table "Products" and make sure that headers have been promoted
+                </li>
+                <li>Confirm that data types are accurate (Note: "product_id" should be whole numbers, "product_sku" should be text), "product_retail_price" and "product_cost" should be decimal numbers)
+                </li>
+                <li>Use the statistics tools to return the number of distinct product brands, followed by distinct product names
+                </li>
+                <li>Add a calculated column named "discount_price", equal to 90% of the original retail price
+                </li>
+                <li>Select "product_brand" and use the Group By option to calculate the average retail price by brand, and name the new column "Avg Retail Price"
+                </li>
+                <li>Replace "null" values with zeros in both the "recyclable" and "low-fat" columns
+                </li>
+              </ul>
+              <strong> I have successfully solved the above problems & all appllied steps is showing right hand-side pane in Power
+                Query window. Check Below 👇 </strong>
+              <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-3" src="assets/img/portfolio/1.png" alt="">
               </p>
             </div>
           </div>
