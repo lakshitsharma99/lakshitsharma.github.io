@@ -100,7 +100,7 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/maxresdefault.jpg" alt="">
+                  <img src="assets/img/dashboard.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
@@ -290,20 +290,20 @@
                 <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Weekend Transactions = CALCULATE([Total Transactions], 'Calendar'[Weekend] = "Y")</pre>
                 <li class="my-3">Create new measures named "All Transactions" and "All Returns" to calculate grand total transactions and returns (regardless of filter context)</li>
                 <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >All Transactions = CALCULATE([Total Transactions], ALL(Transactions_Data))</pre>
-                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >All Return = CALCULATE([Total Returns], ALL(Return_Data))</pre>
-                <li class="my-3">Create a new measure named "Weekend Transactions" to calculate transactions on weekends</li>
-                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Weekend Transactions = CALCULATE([Total Transactions], 'Calendar'[Weekend] = "Y")</pre>
-
-
-
-
-
-
-
+                <pre class="col-lg-5" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >All Return = CALCULATE([Total Returns], ALL(Return_Data))</pre>
+                <li class="my-3">Create a new measure to calculate "Total Revenue" based on transaction quantity and product retail price, and format as $</li>
+                <pre class="col-lg-10" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Total Revenue = SUMX(Transactions_Data,Transactions_Data[quantity] * RELATED(Products[product_retail_price]))</pre>
+                <li class="my-3">Create a new measure to calculate "Total Cost" based on transaction quantity and product cost, and format as $</li>
+                <pre class="col-lg-9" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Total Cost = SUMX(Transactions_Data, Transactions_Data[quantity] * RELATED(Products[product_cost]))</pre>
+                <li class="my-3">Create a new measure named "Total Profit" to calculate total revenue minus total cost, and format as $</li>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Total Profit = Transactions_Data[Total Revenue]-Transactions_Data[Total Cost]</pre>
+                <li class="my-3">Create a new measure to calculate "Profit Margin" by dividing total profit by total revenue calculate total revenue</li>
+                <pre class="col-lg-8" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Profit Margin = DIVIDE(Transactions_Data[Total Profit],Transactions_Data[Total Revenue])</pre>
+                <li class="my-3">Create a new measure named "Unique Products" to calculate the number of unique product names in the Products table</li>
+                <pre class="col-lg-5" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Unique Products = DISTINCTCOUNT(Products[product_name])</pre>
                 </ul>
             </div>
           </div>
-
           <div class="col-lg-12">
             <div class="portfolio-info">
               <h3>PART 4: Building the Report</h3>
