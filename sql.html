@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Lakshit Sharma</title>
+  <title>SQL Portfolio</title>
   <meta content="LakshitSharma99" name="description">
   <meta content="LakshitSharma99" name="keywords">
 
@@ -13,7 +14,9 @@
   <link href="assets/img/pic.jpeg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -45,16 +48,20 @@
           <a href="https://twitter.com/lakshitsharma9_" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
           <a href="https://www.facebook.com/lakshitsharma99" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
           <a href="https://www.instagram.com/lakshitsharma99" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="assets/img/Lakshit Sharma CV.pdf" target="blank" download="Lakshit Sharma CV">CV</a>
         </div>
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="/#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="/" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="/#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="/#experience" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a></li>
-          <li><a href="/#education" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Education & Certifications</span></a></li>
-          <li><a href="/#portfolio" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Portfolio</span></a></li>
+          <li><a href="/#experience" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+              <span>Experience</span></a></li>
+          <li><a href="/#education" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Education &
+                Certifications</span></a></li>
+          <li><a href="/#portfolio" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Portfolio</span></a>
+          </li>
           <li><a href="/#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -68,10 +75,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Power BI Portfolio</h2>
+          <h2>SQL Portfolio</h2>
           <ol>
-            <li><a href="/">Home</a></li>
-            <li>Power BI Project</li>
+            <li><a href="/#portfolio">Portfolio</a></li>
+            <li>SQL Project</li>
           </ol>
         </div>
 
@@ -84,7 +91,7 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
 
@@ -102,10 +109,22 @@
 
               </div>
               <div class="swiper-pagination"></div>
+
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="col-lg-6">
+            <div class="portfolio-info">
+              <h3>Project Summary</h3>
+              I am working for my client Maven Market, a multi-national grocery chain with locations in Canada, Mexico &
+              the United States.
+              I will be working through the entire business intelligence workflow: <strong>Connecting & Shaping the
+                source data,
+                building a relational model, adding calculated columns & measures, and designing an interactive
+                report. </strong>
+            </div>
+          </div>
+          <div class="col-lg-6">
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
@@ -115,48 +134,221 @@
                 <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
               </ul>
             </div>
-            <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                 I am working for my client Maven Market, a multi-national grocery chain with locations in Canada, Mexico and the United States.
+          </div>
 
-                I will be working through the entire business intelligence workflow: connecting and shaping the source data, building a relational model, adding calculated columns and measures, and designing an interactive report.                
-                
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h3>PART 1: Connecting & Shaping the Data
+              </h3>
+              <p>
+                <strong> 1) I am connecting MavenMarket_Customers.csv file in Power BI through Get Data button option.
+                  There are several problems which I will solve with the help of Power Query and then save the file with
+                  name <em>Customers.</em></strong>
+              <ul style="list-style-type:disc">
+                <li>Name the table "Customers", and make sure that headers have been promoted</strong></li>
+                <li>Confirm that data types are accurate (Note: "customer_id" should be whole numbers, and both
+                  "customer_acct_num" and "customer_postal_code" should be text)</strong></li>
+                <li>Add a new column named "full_name" to merge the the "first_name" and "last_name" columns,
+                  separated by a space</strong></li>
+                <li>Create a new column named "birth_year" to extract the year from the "birthdate" column, and
+                  format as text</strong></li>
+                <li>Create a conditional column named "has_children" which equals "N" if "total_children" = 0,
+                  otherwise "Y"</strong></li>
+              </ul>
+              <h5> I have successfully solved the above problems & all appllied steps is showing right hand-side pane in Power
+                Query window. Check Below 👇 </h5>
+              <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-1" src="assets/img/portfolio/1.png" alt="">
+              </p>
+
+              <p>
+                <strong> 2) In this step I am connecting MavenMarket_Products.csv file in Power BI.
+                  There are several problems which I will solve with the help of Power Query and then save the file with
+                  name <em>Products.</em></strong>
+              <ul style="list-style-type:disc">
+                <li>Name the table "Products" and make sure that headers have been promoted
+                </li>
+                <li>Confirm that data types are accurate (Note: "product_id" should be whole numbers, "product_sku" should be text), "product_retail_price" and "product_cost" should be decimal numbers)
+                </li>
+                <li>Use the statistics tools to return the number of distinct product brands, followed by distinct product names
+                </li>
+                <li>Add a calculated column named "discount_price", equal to 90% of the original retail price
+                </li>
+                <li>Select "product_brand" and use the Group By option to calculate the average retail price by brand, and name the new column "Avg Retail Price"
+                </li>
+                <li>Replace "null" values with zeros in both the "recyclable" and "low-fat" columns
+                </li>
+              </ul>
+              <h5> I have successfully solved the above problems & all appllied steps is showing right hand-side pane in Power
+                Query window. Check Below 👇 </h5>
+              <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-1" src="assets/img/portfolio/2.png" alt="">
+              </p>
+
+              <p>
+                <strong> 3) In this step I am connecting MavenMarket_Stores.csv file in Power BI.
+                  There are several problems which I will solve with the help of Power Query and then save the file with
+                  name <em>Stores.</em></strong>
+              <ul style="list-style-type:disc">
+                <li>Name the table "Stores" and make sure that headers have been promoted</li>
+                <li>Confirm that data types are accurate (Note: "store_id" and "region_id" should be whole numbers)
+                </li>
+                <li>Add a calculated column named "full_address", by merging "store_city", "store_state", and "store_country", separated by a comma and space (hint: use a custom separator)</li>
+                <li>Add a calculated column named "area_code", by extracting the characters before the dash ("-") in the "store_phone" field </li>
+              </ul>
+              <h5> I have successfully solved the above problems & all appllied steps is showing right hand-side pane in Power
+                Query window. Check Below 👇 </h5>
+              <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-1" src="assets/img/portfolio/3.png" alt="">
+              </p>
+
+              <p>
+                <strong> 4) In this step I am connecting MavenMarket_Calendar.csv file in Power BI.
+                  There are several problems which I will solve with the help of Power Query and then save the file with
+                  name <em>Calender.</em></strong>
+              <ul style="list-style-type:disc">
+                <li>Name the table "Calendar" and make sure that headers have been promoted</li>
+                <li>Use the date tools in the query editor to add the following columns: <br>a) Start of Week
+                  <br> b) Name of Day
+                  <br> c) Start of Month
+                  <br> d) Name of Month
+                  <br> e) Quarter of Year
+                  <br> f) Year
+                  </li>
+              </ul>
+              <h5> I have successfully solved the above problems & all appllied steps is showing right hand-side pane in Power
+                Query window. Check Below 👇 </h5>
+              <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-1" src="assets/img/portfolio/4.png" alt="">
+              </p>
+
+              <p>
+                <strong> 5) In this step I am connecting a folder named "MavenMarket Transactions", containing both the
+                  MavenMarket_Transactions_1997 and MavenMarket_Transactions_1998 csv files in Power BI.
+                  There are several problems which I will solve with the help of Power Query and then save the file with
+                  name <em>Calender.</em></strong>
+              <ul style="list-style-type:disc">
+                <li>Connect to the folder path, and choose "Edit" (vs. Combine and Edit)</li>
+                <li>Click the "Content" column header (double arrow icon) to combine the files, then remove the "Source.Name" column</li>
+                <li>Name the table "Transaction_Data", and confirm that headers have been promoted</li>
+                <li>Confirm that data types are accurate (all ID columns and quantity should be whole numbers)</li>
+              </ul>
+              <h5> I have successfully solved the above problems & all appllied steps is showing right hand-side pane in Power
+                Query window. Check Below 👇 </h5>
+              <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-1" src="assets/img/portfolio/5.png" alt="">
+             <h4 class = "mt-3"> I have added all 7 tables in Power BI, now this data is ready for Data Analysis and Data Visualization.
+
+               Here's all 7 tables: </h4>
+               <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-2" src="assets/img/portfolio/6.png" alt="">
+               <h4 class = "mt-3 pb-0 mb-0"> Now let's move to Data Modelling and connect all related table with each other. </h4>
+ 
+              </p>
+
+
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h3>PART 2: Creating the Data Model</h3>
+              <p>
+                <strong><h5>Using the report I created in Part 1, I will complete the following steps:</h5></strong>
+                <ul style="list-style-type:disc">
+                  <li>Connect Transaction_Data to Customers, Products, and Stores using valid primary/foreign keys </li>
+                  <li>Connect Transaction_Data to Calendar using both date fields, with an inactive "stock_date" relationship</li>
+                  <li>Connect Return_Data to Products, Calendar, and Stores using valid primary/foreign keys</li>
+                  <li>Connect Stores to Regions as a "snowflake" schema</li>
+                </ul>
+                <img class="col-12 col-md-12 col-sm-12 col-lg-8 mt-2 mb-4" src="assets/img/portfolio/7.png" alt="">
+                <h5>All tables are now connected with each other, now I'm transforming some data and getting it ready for Data Analysis.</h5>
               </p>
             </div>
           </div>
 
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h3>PART 3: Adding DAX Measures</h3>
+              <strong><h5 class="mb-4">Using the report I created in Part 2, now I'm adding all calculated column with the help of DAX :</h5></strong>
+              <ul style="list-style-type:disc" >
+                <li class="my-3">In the Calendar table, add a column named "Weekend" - Equals "Y" for Saturdays or Sundays (otherwise "N")</li>
+                <pre class="col-lg-8" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Weekend = IF(OR('Calendar'[Day Name]=="Saturday",'Calendar'[Day Name]=="Sunday"),"Y","N")</pre>
+                <li class="my-3">In the Calendar table, add a column named "End of Month" - Returns the last date of the current month for each row</li>
+                <pre class="col-lg-5" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >End of Month = ENDOFMONTH('Calendar'[date].[Date])</pre>
+                <li class="my-3">In the Customers table, add a column named "Current Age" - Calculates current customer ages using the "birthdate" column and the TODAY() function</li>
+                <pre class="col-lg-5" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Current Age = DATEDIFF(Customers[birthdate],TODAY(),YEAR)</pre>
+                <li class="my-3">In the Customers table, add a column named "Priority" - Equals "High" for customers who own homes and have Golden membership cards (otherwise "Standard")</li>
+                <pre class="col-lg-9" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Priority = IF(AND(Customers[homeowner]=="Y",Customers[member_card]=="Golden"),"High","Standard")</pre>
+                <li class="my-3">In the Customers table, add a column named "Short_Country" - Returns the first three characters of the customer country, and converts to all uppercase </li>
+                <pre class="col-lg-5" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Short_Country = upper(LEFT(Customers[Country/Region],3))</pre>
+                <li class="my-3">In the Customers table, add a column named "House Number" - Extracts all characters/numbers before the first space in the "customer_address" column</li>
+                <pre class="col-lg-8" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >House Number = LEFT(Customers[customer_address], SEARCH(" ", Customers[customer_address]))</pre>
+                <li class="my-3">In the Products table, add a column named "Price_Tier" - Equals "High" if the retail price is >$3, "Mid" if the retail price is >$1, and "Low" otherwise</li>
+                <pre class="col-lg-10" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Price_Tier = IF(Products[product_retail_price]>3, "High", IF(Products[product_retail_price]>1, "Mid", "Low"))</pre>
+                <li class="my-3">In the Stores table, add a column named "Years_Since_Remodel" - Calculates the number of years between the current date (TODAY()) and the last remodel date</li>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Years_Since_Remodel = DATEDIFF(Stores[last_remodel_date],TODAY(), YEAR)</pre>
+                <li class="my-3">Create a new measure named "Weekend Transactions" to calculate transactions on weekends</li>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Weekend Transactions = CALCULATE([Total Transactions], 'Calendar'[Weekend] = "Y")</pre>
+                <li class="my-3">Create new measures named "All Transactions" and "All Returns" to calculate grand total transactions and returns (regardless of filter context)</li>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >All Transactions = CALCULATE([Total Transactions], ALL(Transactions_Data))</pre>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >All Return = CALCULATE([Total Returns], ALL(Return_Data))</pre>
+                <li class="my-3">Create a new measure named "Weekend Transactions" to calculate transactions on weekends</li>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Weekend Transactions = CALCULATE([Total Transactions], 'Calendar'[Weekend] = "Y")</pre>
+
+
+
+
+
+
+
+                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h3>PART 4: Building the Report</h3>
+              <p>
+                I am working for my client Maven Market, a multi-national grocery chain with locations in Canada, Mexico
+                and
+                the United States.
+
+                I will be working through the entire business intelligence workflow: connecting and shaping the source
+                data,
+                building a relational model, adding calculated columns and measures, and designing an interactive
+                report.
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
+
     </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="container">
-        <div class="credits">
-          Last Updated on 13 January 2022 by <a href="https://www.linkedin.com/in/lakshitsharma99" target="_blank">Lakshit Sharma</a>
-        </div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="credits">
+        Last Updated on 13 January 2022 by <a href="https://www.linkedin.com/in/lakshitsharma99" target="_blank">Lakshit
+          Sharma</a>
       </div>
-    </footer><!-- End  Footer -->
-  
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-  
-  </body>
-  
-  </html>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

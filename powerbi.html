@@ -270,22 +270,36 @@
               <h3>PART 3: Adding DAX Measures</h3>
               <strong><h5 class="mb-4">Using the report I created in Part 2, now I'm adding all calculated column with the help of DAX :</h5></strong>
               <ul style="list-style-type:disc" >
-                <li class="my-2">In the Calendar table, add a column named "Weekend" - Equals "Y" for Saturdays or Sundays (otherwise "N")</li>
-                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Weekend = IF(OR('Calendar'[Day Name]=="Saturday",'Calendar'[Day Name]=="Sunday"),"Y","N")</mark></h6>
-                <li class="my-2">In the Calendar table, add a column named "End of Month" - Returns the last date of the current month for each row</li>
-                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">End of Month = ENDOFMONTH('Calendar'[date].[Date])</mark></h5>
-                <li class="my-2">In the Customers table, add a column named "Current Age" - Calculates current customer ages using the "birthdate" column and the TODAY() function</li>
-                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Current Age = DATEDIFF(Customers[birthdate],TODAY(),YEAR)</mark></h5>
-                <li class="my-2">In the Customers table, add a column named "Priority" - Equals "High" for customers who own homes and have Golden membership cards (otherwise "Standard")</li>
-                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Priority = IF(AND(Customers[homeowner]=="Y",Customers[member_card]=="Golden"),"High","Standard")</mark></h6>
-                <li class="my-2">In the Customers table, add a column named "Short_Country" - Returns the first three characters of the customer country, and converts to all uppercase </li>
-                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Weekend = IF(OR('Calendar'[Day Name]=="Saturday",'Calendar'[Day Name]=="Sunday"),"Y","N")</mark></h6>
-                <li class="my-2">In the Customers table, add a column named "House Number" - Extracts all characters/numbers before the first space in the "customer_address" column (hint: use SEARCH)</li>
-                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">End of Month = ENDOFMONTH('Calendar'[date].[Date])</mark></h6>
-                <li class="my-2">In the Products table, add a column named "Price_Tier" - Equals "High" if the retail price is >$3, "Mid" if the retail price is >$1, and "Low" otherwise</li>
-                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Current Age = DATEDIFF(Customers[birthdate],TODAY(),YEAR)</mark></h6>
-                <li class="my-2">In the Stores table, add a column named "Years_Since_Remodel" - Calculates the number of years between the current date (TODAY()) and the last remodel date</li>
-                <h6 class="my-3"><mark style="background-color:rgb(232, 242, 255);">Priority = IF(AND(Customers[homeowner]=="Y",Customers[member_card]=="Golden"),"High","Standard")</mark></h6>
+                <li class="my-3">In the Calendar table, add a column named "Weekend" - Equals "Y" for Saturdays or Sundays (otherwise "N")</li>
+                <pre class="col-lg-8" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Weekend = IF(OR('Calendar'[Day Name]=="Saturday",'Calendar'[Day Name]=="Sunday"),"Y","N")</pre>
+                <li class="my-3">In the Calendar table, add a column named "End of Month" - Returns the last date of the current month for each row</li>
+                <pre class="col-lg-5" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >End of Month = ENDOFMONTH('Calendar'[date].[Date])</pre>
+                <li class="my-3">In the Customers table, add a column named "Current Age" - Calculates current customer ages using the "birthdate" column and the TODAY() function</li>
+                <pre class="col-lg-5" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Current Age = DATEDIFF(Customers[birthdate],TODAY(),YEAR)</pre>
+                <li class="my-3">In the Customers table, add a column named "Priority" - Equals "High" for customers who own homes and have Golden membership cards (otherwise "Standard")</li>
+                <pre class="col-lg-9" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Priority = IF(AND(Customers[homeowner]=="Y",Customers[member_card]=="Golden"),"High","Standard")</pre>
+                <li class="my-3">In the Customers table, add a column named "Short_Country" - Returns the first three characters of the customer country, and converts to all uppercase </li>
+                <pre class="col-lg-5" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Short_Country = upper(LEFT(Customers[Country/Region],3))</pre>
+                <li class="my-3">In the Customers table, add a column named "House Number" - Extracts all characters/numbers before the first space in the "customer_address" column</li>
+                <pre class="col-lg-8" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >House Number = LEFT(Customers[customer_address], SEARCH(" ", Customers[customer_address]))</pre>
+                <li class="my-3">In the Products table, add a column named "Price_Tier" - Equals "High" if the retail price is >$3, "Mid" if the retail price is >$1, and "Low" otherwise</li>
+                <pre class="col-lg-10" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Price_Tier = IF(Products[product_retail_price]>3, "High", IF(Products[product_retail_price]>1, "Mid", "Low"))</pre>
+                <li class="my-3">In the Stores table, add a column named "Years_Since_Remodel" - Calculates the number of years between the current date (TODAY()) and the last remodel date</li>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Years_Since_Remodel = DATEDIFF(Stores[last_remodel_date],TODAY(), YEAR)</pre>
+                <li class="my-3">Create a new measure named "Weekend Transactions" to calculate transactions on weekends</li>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Weekend Transactions = CALCULATE([Total Transactions], 'Calendar'[Weekend] = "Y")</pre>
+                <li class="my-3">Create new measures named "All Transactions" and "All Returns" to calculate grand total transactions and returns (regardless of filter context)</li>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >All Transactions = CALCULATE([Total Transactions], ALL(Transactions_Data))</pre>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >All Return = CALCULATE([Total Returns], ALL(Return_Data))</pre>
+                <li class="my-3">Create a new measure named "Weekend Transactions" to calculate transactions on weekends</li>
+                <pre class="col-lg-7" mark style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)" >Weekend Transactions = CALCULATE([Total Transactions], 'Calendar'[Weekend] = "Y")</pre>
+
+
+
+
+
+
+
                 </ul>
             </div>
           </div>
