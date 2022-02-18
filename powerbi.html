@@ -134,8 +134,9 @@
               <h3>Project information</h3>
               <ul>
                 <li><strong>Category</strong>: Business Intelligence Report</li>
-                <li><strong>Client</strong>: Maven Market and others</li>
+                <li><strong>Client</strong>: Maven Market</li>
                 <li><strong>Project date</strong>: 01 Jan, 2022</li>
+                <li><strong>Live URL</strong>: 01 Jan, 2022</li>
               </ul>
             </div>
           </div>
@@ -154,19 +155,16 @@
                   format as text</strong></li>
                 <li>Created a conditional column named "has_children" which equals "N" if "total_children" = 0,
                   otherwise "Y"</strong></li>
+                <li>Also updated datatypes of all columns to text and whole number as per their nature.</strong></li>  
               </ul>
               <h5> After data transformation through Power Query, the data will look like this 👇 </h5>
               <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-1" src="assets/img/powerbi/1.png" alt="">
               </p>
-
               <p>
                 <strong> 2) I am connecting Products.csv file in Power BI through Get Data feature. Also, doing some
                   Data Cleansing as below: </strong>
               <ul style="list-style-type:disc">
                 <li>Added a calculated column named "discount_price", equal to 90% of the original retail price
-                </li>
-                <li>Select "product_brand" and use the Group By option to calculate the average retail price by brand,
-                  and name the new column "Avg Retail Price"
                 </li>
                 <li>Replaced "null" values with zeros in both the "recyclable" and "low-fat" columns
                 </li>
@@ -190,7 +188,7 @@
               <p>
                 <strong> 4) I am connecting Calendar.csv file in Power BI through Get Data feature. Also, doing some Data Cleansing as below: </strong>
               <ul style="list-style-type:disc">
-                <li>Using the date tools in the query editor to add the following columns:
+                <li>Adding add date columns this will help in time intelligence calculations:
                   <br> a) Start of Week
                   <br> b) Name of Day
                   <br> c) Start of Month
@@ -207,14 +205,13 @@
                 <strong> 5) I am connecting a folder in Power BI through Get Data feature to add Transactions_1997 and Transactions_1998. Also, doing some Data Cleansing as below: </strong>
               <ul style="list-style-type:disc">
                 <li>Connected to the folder path, and choose "Edit" (vs. Combine and Edit)</li>
-                <li>Named the table "Transaction_Data", and column headers have been promoted</li>
+                <li>Removed spaces and split the date columns by delimiters then merge in correct date format.</li>
               </ul>
               <h5> After data transformation through Power Query, the data will look like this 👇 </h5>
               <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-1" src="assets/img/powerbi/5.png" alt="">
 
-              <h4 class="mt-3"> I have added all tables in Power BI, now this data is ready for Data Analysis and Data
+              <h4 class="mt-3"> I have connected all tables in Power BI, now our data is ready for Data Analysis and Data
                 Visualization.
-
                 Here's all tables: </h4>
               <img class="col-12 col-md-12  col-sm-12 col-lg-8 mt-2" src="assets/img/powerbi/6.png" alt="">
               <h4 class="mt-3 pb-0 mb-0"> Now let's move to Data Modelling and connect all related table with each
@@ -234,13 +231,13 @@
                   <h5>Using the report I created in Part 1, I will complete the following steps:</h5>
                 </strong>
               <ul style="list-style-type:disc">
-                <li>Connected Transaction_Data to Customers, Products, and Stores using valid primary/foreign keys </li>
-                <li>Connected Transaction_Data to Calendar using both date fields</li>
-                <li>Connected Return_Data to Products, Calendar, and Stores using valid primary/foreign keys</li>
-                <li>Connected Stores to Regions as a "snowflake" schema. I have used snowflake scehma here as dimension table having other dimension table.</li>
+                <li>Connected Transactions to Customers, Products, and Stores using valid primary/foreign keys </li>
+                <li>Connected Transactions to Calendar using both date fields</li>
+                <li>Connected Returns to Products, Calendar, and Stores using valid primary/foreign keys</li>
+                <li>Connected Stores to Regions. This is snowflake schema as dimension table having other dimension table.</li>
               </ul>
               <img class="col-12 col-md-12 col-sm-12 col-lg-8 mt-2 mb-4" src="assets/img/powerbi/7.png" alt="">
-              <h5>All tables are now connected with each other, now I'm transforming some data and getting it ready for
+              <h5>All tables are now connected with each other, now I'm adding some calculated columns & DAX measures and getting it ready for
                 Data Analysis.</h5>
               </p>
             </div>
@@ -248,7 +245,7 @@
 
           <div class="col-lg-12">
             <div class="portfolio-info">
-              <h3>PART 3: Adding DAX Measures</h3>
+              <h3>PART 3: Adding DAX Measures & Calculated Columns</h3>
               <strong>
                 <h5 class="mb-4">Using the report I created in Part 2, now I'm adding all calculated column with the
                   help of DAX :</h5>
