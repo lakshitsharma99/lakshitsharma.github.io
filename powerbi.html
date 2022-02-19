@@ -318,7 +318,14 @@
                   names in the Products table</li>
                 <pre class="col-lg-5" mark
                   style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)">Unique Products = DISTINCTCOUNT(Products[product_name])</pre>
-              </ul>
+                <li class="my-3">Create new measures named  "Last Month Transactions", "Last Month Revenue", "Last Month Profit".</li>
+                <pre class="col-lg-10" mark
+                  style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)">Last Month Transactions = CALCULATE(Transactions[Total Transactions], DATEADD('Calendar'[Date],-1,MONTH))</pre>
+                 <pre class="col-lg-9" mark
+                  style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)">Last Month Revenue = CALCULATE(Transactions[Total Revenue], DATEADD('Calendar'[Date],-1,MONTH))</pre>
+                <pre class="col-lg-9" mark
+                  style="background-color:rgb(46, 45, 45); color:rgb(232, 242, 255)">Last Month Profit = CALCULATE(Transactions[Total Profit], DATEADD('Calendar'[Date],-1,MONTH))</pre>
+                </ul>
             </div>
           </div>
           <div class="col-lg-12">
@@ -340,7 +347,7 @@
               <p>
                 <h5 class="mb-2">I've successfully published the report to workspace, now it is be accessable by my client or any business user : </h5>
                 <img class="col-12 col-md-12  col-sm-12 col-lg-10 mt-2" src="assets/img/powerbi/Published.png" alt="">
-                <h5 class="mt-2">I've also create subscription for my client so that they will get a snapshot of report in their email: </h5>
+                <h5 class="mt-2">I've also created subscription for my client so that they will get a snapshot of report in their email: </h5>
                 <img class="col-12 col-md-12  col-sm-12 col-lg-10 mt-2" src="assets/img/powerbi/Published2.png" alt="">
                 <h5 class="mt-2">Recieved report snapshot via email: </h5>
                 <img class="col-12 col-md-12  col-sm-12 col-lg-10 mt-2" src="assets/img/powerbi/Subscription.png" alt="">
